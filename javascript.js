@@ -1,9 +1,13 @@
-function lighton() {
-    document.getElementById('myimage').src = "semaverde.gif";
+var luces = ['semrojo.gif', 'semamarillo.gif','semaverde.gif'];
+
+function cambiarluces(){
+	var index = Math.floor((Math.random()*luces.length));
+	document.getElementById("myimage").src=luces[index];
 }
-function lightoff() {
-    document.getElementById('myimage').src = "semrojo.gif";
-}
+
+function prenderluces(){
+	
+	setInterval(cambiarluces, 2000);
 
 function mensaje(){
 	alert("Esta saliendo de StraKnow");
